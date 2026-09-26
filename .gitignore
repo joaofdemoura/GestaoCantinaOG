@@ -1,0 +1,11 @@
+.gradle/
+.idea/
+local.properties
+**/build/
+*.iml
+
+backend/node_modules/
+backend/.local.json
+local-runtime/
+backend-reference/
+backend/*.local.txt

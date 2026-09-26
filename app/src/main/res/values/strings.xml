@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cantina</string>
+    <string name="ver_extrato_filho">Ver extrato do filho</string>
+    <string name="sair_conta">Sair da conta</string>
+    <string name="carregando_filho">Carregando vínculo do responsável…</string>
+    <string name="vinculo_nao_encontrado">Vínculo não encontrado.</string>
+    <string name="resumo_filho">Olá, %1$s!\nAluno vinculado: %2$s\nIdade: %3$d</string>
+</resources>
