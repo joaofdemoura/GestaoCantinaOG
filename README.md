@@ -87,4 +87,4 @@ Resultados registrados em `VERIFICACAO.md`. Não execute o teste legado completo
 
 ## Uso de inteligência artificial
 
-Veja [IA.md](IA.md) para entender como a inteligência artificial foi utilizada no desenvolvimento do aplicativo, do painel web e da integração PHP.
+Veja [IA.md](docs/IA.md) para entender como a inteligência artificial foi utilizada no desenvolvimento do aplicativo, do painel web e da integração PHP.
