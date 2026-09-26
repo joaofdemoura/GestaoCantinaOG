@@ -84,3 +84,7 @@ A migração de um banco Android anterior é opcional: `php web/tools/migrate-an
 - Telas Android: prepare a conta com `php web/tools/android-fixture.php`, execute `gradlew.bat :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.example.cantina.NovasTelasTest,com.example.cantina.VoltarTurmaTest` e remova a conta com `php web/tools/android-fixture.php --cleanup` ao terminar.
 
 Resultados registrados em `VERIFICACAO.md`. Não execute o teste legado completo `FluxoTest` contra dados de uso diário: ele contém uma compra de teste. Os arquivos ZIP e SQL antigos mantidos na raiz são referências; o código integrado está nas pastas acima.
+
+## Uso de inteligência artificial
+
+Veja [IA.md](IA.md) para entender como a inteligência artificial foi utilizada no desenvolvimento do aplicativo, do painel web e da integração PHP.
