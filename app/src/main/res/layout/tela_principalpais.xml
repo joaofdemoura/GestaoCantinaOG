@@ -33,6 +33,7 @@
                 android:textStyle="bold" />
 
 
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnTrocarAluno" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Trocar aluno" android:visibility="gone" />
             <TextView android:id="@+id/infoFilho" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:textColor="#1A1A1A" android:textSize="16sp" />
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"

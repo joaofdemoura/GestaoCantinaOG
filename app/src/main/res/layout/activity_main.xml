@@ -96,6 +96,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="26dp" />
 
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/turma" android:labelFor="@id/editTextTurma" android:textSize="20sp" />
+            <EditText android:id="@+id/editTextTurma" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:hint="@string/turma_hint" android:inputType="textCapWords"
+                android:maxLength="30" android:maxLines="1" android:singleLine="true" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/turma_ajuda" android:layout_marginBottom="20dp" />
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"

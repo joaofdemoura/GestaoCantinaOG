@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cantina admmin</title>
+  <meta name="description" content="Administração de pedidos da cantina escolar.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside>
+    <a class="brand" href="#painel">XXXXXXX</a>
+    <nav id="nav"></nav>
+    <div class="sidebar-foot">
+      <div>
+        <span id="admin-name">Usuário Admin</span>
+        <small>Administração</small>
+      </div>
+      <button type="button" class="logout" onclick="logout()">Sair</button>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header>
+      <div><span class="breadcrumb">Cantina XXXXX</span><span class="divider">/</span><span id="crumb">Início</span></div>
+    </header>
+
+    <main id="app"></main>
+
+
+  </div>
+
+  <dialog id="modal">
+    <div id="modal-content"></div>
+  </dialog>
+  <div id="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

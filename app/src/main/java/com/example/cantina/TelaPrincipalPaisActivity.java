@@ -15,6 +15,7 @@ import java.util.UUID;
 
 public class TelaPrincipalPaisActivity extends BaseActivity {
     private boolean busy, carregado;
+    private JSONArray filhos = new JSONArray();
     private Long diario, mensal;
     private String creditoId;
     private long creditoValor=-1;
@@ -22,6 +23,15 @@ public class TelaPrincipalPaisActivity extends BaseActivity {
         super.onCreate(state);
         setContentView(R.layout.tela_principalpais);
         if(state!=null) {creditoId=state.getString("creditoId");creditoValor=state.getLong("creditoValor",-1);}
+        findViewById(R.id.btnTrocarAluno).setOnClickListener(v -> {
+            if(busy || filhos.length()<2)return;
+            String[] nomes=new String[filhos.length()];
+            for(int i=0;i<filhos.length();i++)nomes[i]=filhos.optJSONObject(i).optString("usuario_filho");
+            new AlertDialog.Builder(this).setTitle("Selecionar aluno").setItems(nomes,(dialog,index)->{
+                Api.alunoId=filhos.optJSONObject(index).optString("cpf_filho");
+                creditoId=null;creditoValor=-1;carregado=false;carregarFilho();
+            }).show();
+        });
         findViewById(R.id.cardExtrato).setOnClickListener(v -> abrirExtrato());
         findViewById(R.id.btnVerExtrato).setOnClickListener(v -> abrirExtrato());
         findViewById(R.id.btnMudarSaldo).setOnClickListener(v -> adicionarSaldo());
@@ -39,10 +49,15 @@ public class TelaPrincipalPaisActivity extends BaseActivity {
     @Override protected void onResume() {
         super.onResume();
         if(isFinishing()||!"responsavel".equals(Api.perfil))return;
+        carregarFilho();
+    }
+    private void carregarFilho() {
         TextView info=findViewById(R.id.infoFilho);info.setText(R.string.carregando_filho);
         Api.request(this,"GET","/responsavel/filho",null,(data,error)->{
             if(!"responsavel".equals(Api.perfil))return;
             if(error!=null){info.setText(error);return;}
+            JSONArray lista=data.optJSONArray("filhos");filhos=lista==null?new JSONArray():lista;
+            findViewById(R.id.btnTrocarAluno).setVisibility(filhos.length()>1?android.view.View.VISIBLE:android.view.View.GONE);
             JSONObject filho=data.optJSONObject("filho");
             if(filho==null){info.setText(R.string.vinculo_nao_encontrado);return;}
             info.setText(getString(R.string.resumo_filho,Api.nome,filho.optString("usuario_filho"),filho.optInt("idade_filho")));

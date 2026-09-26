@@ -57,11 +57,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="16dp"
-            app:elevation="4dp"
-            app:icon="@android:drawable/ic_menu_myplaces"
-            app:iconGravity="textStart"
-            app:iconPadding="12dp"
-            app:iconTint="#FFFFFF" />
+            app:elevation="4dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/bnt_aluno"
@@ -74,10 +70,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="16dp"
-            app:icon="@android:drawable/ic_menu_edit"
-            app:iconGravity="textStart"
-            app:iconPadding="12dp"
-            app:iconTint="#D32F2F"
             app:strokeColor="#D32F2F"
             app:strokeWidth="2dp" />
 

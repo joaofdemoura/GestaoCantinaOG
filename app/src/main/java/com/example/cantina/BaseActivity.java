@@ -33,9 +33,27 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
     @Override public void setContentView(int layout) {
-        super.setContentView(layout);
+        super.setContentView(R.layout.activity_shell);
+        android.widget.FrameLayout content = findViewById(R.id.screenContent);
+        getLayoutInflater().inflate(layout, content, true);
+        if (this instanceof TelaInicialActivity) {
+            findViewById(R.id.btnVoltar).setVisibility(View.GONE);
+        }
+        findViewById(R.id.btnVoltar).setOnClickListener(v -> {
+            if (!(this instanceof TelaInicialActivity) && isTaskRoot()) {
+                startActivity(new android.content.Intent(this, TelaInicialActivity.class));
+                finish();
+            } else {
+                finish();
+            }
+        });
         CarrinhoStore.inicializar(this);
-        View root = findViewById(R.id.main);
+        android.content.SharedPreferences config = getSharedPreferences("cantina", 0);
+        if (!"php-laragon-v1".equals(config.getString("backendVersion", ""))) {
+            CarrinhoStore.limpar();
+            config.edit().putString("backendVersion", "php-laragon-v1").apply();
+        }
+        View root = findViewById(R.id.screenShell);
         if (root == null) return;
         final int left = root.getPaddingLeft(), top = root.getPaddingTop();
         final int right = root.getPaddingRight(), bottom = root.getPaddingBottom();

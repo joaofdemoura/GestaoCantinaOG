@@ -7,7 +7,7 @@ import android.widget.Toast;
 import org.json.JSONObject;
 
 public class MainActivity extends BaseActivity {
-    private EditText nome,cpf,idade,senha;
+    private EditText nome,cpf,idade,senha,turma;
     private boolean busy;
     @Override protected void onResume() {
         super.onResume();
@@ -16,6 +16,7 @@ public class MainActivity extends BaseActivity {
     }
     @Override protected void onCreate(Bundle state) {
         super.onCreate(state);setContentView(R.layout.activity_main);
+        turma=findViewById(R.id.editTextTurma);
         nome=findViewById(R.id.editTextText);cpf=findViewById(R.id.editTextText3);
         idade=findViewById(R.id.editTextText2);senha=findViewById(R.id.editTextText4);senha.setSaveEnabled(false);
         findViewById(R.id.bnt_cadastrar).setOnClickListener(v->entrar(true));
@@ -27,9 +28,14 @@ public class MainActivity extends BaseActivity {
         String id=cpf.getText().toString().trim();
         if(!id.matches("[0-9]{11}")){cpf.setError("Informe os 11 dígitos do CPF.");return;}
         if(senha.length()<(cadastro?6:4)){senha.setError(cadastro?"Use pelo menos 6 caracteres.":"Informe sua senha.");return;}
+        String sala=turma.getText().toString().trim();
+        if ((cadastro && sala.isEmpty()) || sala.length()>30) {
+            turma.setError(getString(R.string.turma_invalida));return;
+        }
         JSONObject body=new JSONObject();
         try {
             body.put("cpf",id).put("senha",senha.getText().toString());
+            if(!sala.isEmpty())body.put("turma",sala);
             if(cadastro) {
                 if(nome.getText().toString().trim().isEmpty()){nome.setError("Informe seu nome.");return;}
                 int anos;try{anos=Integer.parseInt(idade.getText().toString());}catch(NumberFormatException e){anos=0;}

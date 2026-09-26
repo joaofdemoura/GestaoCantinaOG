@@ -14,7 +14,7 @@ android {
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         versionCode 1
         versionName '1.1'
-        buildConfigField 'String', 'API_BASE_URL', groovy.json.JsonOutput.toJson(providers.gradleProperty('apiBaseUrl').getOrElse('http://127.0.0.1:8080/api'))
+        buildConfigField 'String', 'API_BASE_URL', groovy.json.JsonOutput.toJson(providers.gradleProperty('apiBaseUrl').getOrElse('http://127.0.0.1:8000/api/android'))
     }
 
     compileOptions {

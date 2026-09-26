@@ -27,14 +27,14 @@ public class ConexaoServidorTest {
         Activity main=instrumentation.startActivitySync(new Intent(instrumentation.getTargetContext(),MainActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         instrumentation.waitForIdleSync();
-        assertEquals("http://10.0.2.2:8080/api",Api.baseUrl());
-        assertTrue(request(main,"GET","/health",null).getBoolean("ok"));
+        assertEquals("http://10.0.2.2:8000/api/android",Api.baseUrl());
+        assertEquals("php",request(main,"GET","/health",null).getString("backend"));
         JSONObject session=request(main,"POST","/login",new JSONObject().put("cpf","11111111111").put("senha","1234"));
         instrumentation.runOnMainSync(()->Api.session(session));
         try {
             JSONObject menu=request(main,"GET","/cardapio",null);
             assertTrue(menu.getJSONArray("produtos").length()>=3);
-            assertEquals("Sanduíche Natural",menu.getJSONArray("produtos").getJSONObject(0).getString("nome"));
+            assertTrue(menu.getJSONArray("produtos").getJSONObject(0).getInt("precoCentavos")>0);
         } finally {
             request(main,"POST","/logout",null);
             instrumentation.runOnMainSync(Api::clear);

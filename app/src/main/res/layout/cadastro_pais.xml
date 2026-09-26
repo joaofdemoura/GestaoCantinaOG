@@ -4,6 +4,7 @@
 <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Acesso dos responsáveis" android:textSize="28sp" />
 <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Use a conta de responsável fornecida pela cantina. Contas de alunos não têm acesso. Para cadastrar ou recuperar sua conta, procure a administração." />
 <EditText android:id="@+id/et_cpf" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:hint="CPF do responsável" android:inputType="number" android:maxLength="11" android:minHeight="48dp" />
+<EditText android:id="@+id/et_cpf_filho" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/cpf_filho" android:inputType="number" android:maxLength="11" android:minHeight="48dp" android:imeOptions="actionNext" />
 <EditText android:id="@+id/et_senha" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Senha do responsável" android:inputType="textPassword" android:minHeight="48dp" />
 <Button android:id="@+id/bnt_cadastrar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Entrar como responsável" />
 </LinearLayout></ScrollView></FrameLayout>

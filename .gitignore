@@ -9,3 +9,10 @@ backend/.local.json
 local-runtime/
 backend-reference/
 backend/*.local.txt
+
+# Configuração privada e arquivos gerados
+web/api/config.local.php
+web/.vscode/
+*.log
+*.hprof
+og.zip

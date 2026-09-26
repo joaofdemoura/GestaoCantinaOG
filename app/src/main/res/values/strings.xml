@@ -6,4 +6,11 @@
     <string name="carregando_filho">Carregando vínculo do responsável…</string>
     <string name="vinculo_nao_encontrado">Vínculo não encontrado.</string>
     <string name="resumo_filho">Olá, %1$s!\nAluno vinculado: %2$s\nIdade: %3$d</string>
+    <string name="voltar">Voltar</string>
+    <string name="turma">Turma</string>
+    <string name="turma_hint">Ex.: 2º A</string>
+    <string name="turma_ajuda">Obrigatória no cadastro. No login, preencha para atualizar sua turma.</string>
+    <string name="turma_invalida">Informe sua turma (até 30 caracteres).</string>
+    <string name="cpf_filho">CPF do filho</string>
+    <string name="cpf_filho_invalido">Informe os 11 dígitos do CPF do filho.</string>
 </resources>

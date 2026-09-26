@@ -5,7 +5,7 @@
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Extrato" android:textSize="30sp" android:gravity="center" />
             <TextView android:id="@+id/produtosPedido1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:textSize="18sp" android:textIsSelectable="true" />
             <Button android:id="@+id/btnAtualizarExtrato" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Atualizar pedidos" />
-            <Button android:id="@+id/bnt_voltar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Voltar" />
+            <Button android:id="@+id/bnt_voltar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Voltar" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

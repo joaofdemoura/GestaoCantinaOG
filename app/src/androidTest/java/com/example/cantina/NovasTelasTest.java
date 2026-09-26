@@ -33,7 +33,7 @@ public class NovasTelasTest {
  @Test public void painelPaisCarregaSaldoEAbreFormularios()throws Exception{
   Activity inicio=launch(TelaInicialActivity.class);
   Activity login=click(inicio,R.id.bnt_pai,CadastroPaisActivity.class);
-  ui(()->{((EditText)login.findViewById(R.id.et_cpf)).setText("90909090909");((EditText)login.findViewById(R.id.et_senha)).setText("Teste-responsavel-integracao-2026");});
+  ui(()->{((EditText)login.findViewById(R.id.et_cpf)).setText("90909090909");((EditText)login.findViewById(R.id.et_cpf_filho)).setText("90909090908");((EditText)login.findViewById(R.id.et_senha)).setText("Teste-responsavel-integracao-2026");});
   Activity painel=click(login,R.id.bnt_cadastrar,TelaPrincipalPaisActivity.class);
   long deadline=System.currentTimeMillis()+15000;
   java.util.concurrent.atomic.AtomicReference<String> saldo=new java.util.concurrent.atomic.AtomicReference<>("");

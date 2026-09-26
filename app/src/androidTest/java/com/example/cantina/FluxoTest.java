@@ -38,6 +38,7 @@ public class FluxoTest {
         Activity login=clickTo(main,R.id.btnResponsavel,CadastroPaisActivity.class);
         ui(()->{
             ((EditText)login.findViewById(R.id.et_cpf)).setText("90909090909");
+            ((EditText)login.findViewById(R.id.et_cpf_filho)).setText("90909090908");
             ((EditText)login.findViewById(R.id.et_senha)).setText("Teste-responsavel-integracao-2026");
         });
         Activity area=clickTo(login,R.id.bnt_cadastrar,TelaPrincipalPaisActivity.class);
@@ -55,6 +56,7 @@ public class FluxoTest {
         String cpf="8"+String.valueOf(System.currentTimeMillis()).substring(3);
         ui(()->{
             CarrinhoStore.limpar();
+            ((EditText)main.findViewById(R.id.editTextTurma)).setText("7º A");
             ((EditText)main.findViewById(R.id.editTextText)).setText("Teste Android integração");
             ((EditText)main.findViewById(R.id.editTextText3)).setText(cpf);
             ((EditText)main.findViewById(R.id.editTextText2)).setText("12");
