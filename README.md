@@ -31,6 +31,8 @@ Principais Funcionalidades
 * Gestão de Limite de Gastos: Definição de teto diário ou semanal de consumo.
 * Extrato Detalhado: Consulta de histórico de compras feitas pelo aluno.
 
+Link do figma: https://www.figma.com/design/Ulsq3EWOsZpJsGhYIkGadJ/Untitled?node-id=0-1&t=RoI7FJgzX1CD5Ns4-1
+
 App Mobile - Módulo dos Alunos
 * Fazer Pedido: Escolha de itens do cardápio e agendamento por horário de recreio.
 * Resumo de Pagamento: Escolha da forma de pagamento e confirmação.
