@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".produto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <!-- Espaço no topo -->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <!-- Imagem do produto -->
+
+            <ImageView
+                android:id="@+id/imagemProduto"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <!-- Nome -->
+
+            <TextView
+                android:id="@+id/nomeProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Produto 1"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- Descrição -->
+
+            <TextView
+                android:id="@+id/descricaoProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Descrição do produto"
+                android:textSize="16sp" />
+
+            <!-- Preço -->
+
+            <TextView
+                android:id="@+id/precoProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="R$ 10,00"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Quantidade -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Quantidade:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Diminuir -->
+
+                <Button
+                    android:id="@+id/btnDiminuir"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="−"
+                    android:textSize="20sp" />
+
+                <!-- Quantidade -->
+
+                <TextView
+                    android:id="@+id/textQuantidade"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!-- Aumentar -->
+
+                <Button
+                    android:id="@+id/btnAumentar"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="20sp" />
+
+                <!-- Lixeira -->
+
+                <ImageButton
+                    android:id="@+id/btnLixeira"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="Remover produto"
+                    android:src="@android:drawable/ic_menu_delete" />
+
+            </LinearLayout>
+
+            <!-- Observação -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Alguma observação?"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/observacaoProduto"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:background="#EEEEEE"
+                android:gravity="top"
+                android:hint="Ex.: Não como queijo, não colocar molho..."
+                android:inputType="textMultiLine"
+                android:padding="15dp" />
+
+            <!-- Total -->
+
+            <TextView
+                android:id="@+id/totalProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="right"
+                android:text="Total: R$ 10,00"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Adicionar ao carrinho -->
+
+            <Button
+                android:id="@+id/btnAdicionarCarrinho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#FF0000"
+                android:text="Adicionar ao carrinho"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

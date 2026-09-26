@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".relatorio_pagamento">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:id="@+id/tituloRelatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Relatório de Pagamento"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <!-- Nome da pessoa -->
+
+            <TextView
+                android:id="@+id/nomePessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Olá, Nome!"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numeroPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="O pedido 001 será pago com:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Forma de pagamento:"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinnerPagamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/dataPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Data do pedido: 26/09/2026"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Horário do recreio:"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinnerRecreio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/valorPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="right"
+                android:text="Valor total: R$ 10,00"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <Button
+                android:id="@+id/btnConfirmarPagamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF0000"
+                android:text="Confirmar pagamento"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
